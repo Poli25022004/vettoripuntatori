@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define LUNGHEZZA	4
+
+void somma(float* a, int lunghezza, float* b, float* c) {
+	for (int indice = 0; indice < LUNGHEZZA; indice++) {
+		c[indice] = a[indice] + b[indice];
+	}
+}
+int main()
+{
+	
+	float a[LUNGHEZZA], b[LUNGHEZZA], c[LUNGHEZZA];
+		float num;
+		for (int indice = 0; indice < LUNGHEZZA; indice++) {
+			printf("inserisci un numero");
+			scanf("%f",& num);
+			a[indice] = num;
+			b[indice] = num-1;
+		}
+		somma(a, LUNGHEZZA, b, c);
+	
+	for (int indice = 0; indice < LUNGHEZZA; indice++) {
+		printf("%f\n",c[indice]);
+
+	}
+	return 0;
+
+}
